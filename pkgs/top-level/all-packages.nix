@@ -5019,9 +5019,6 @@ with pkgs;
     inherit (darwin.apple_sdk.frameworks) Security;
   };
 
-  rustdesk-server = callPackage ../by-name/ru/rustdesk-server/package.nix {
-    inherit (darwin.apple_sdk.frameworks) Security;
-  };
 
   s3fs = darwin.apple_sdk_11_0.callPackage ../tools/filesystems/s3fs { };
 
@@ -19185,7 +19182,4 @@ with pkgs;
     libsoup = libsoup_3;
   };
 
-  rustdesk-flutter = callPackage ../by-name/ru/rustdesk-flutter/package.nix {
-    flutter = flutter324;
-  };
 }
